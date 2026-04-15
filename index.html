@@ -1,70 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cover Template · Bootstrap</title>
-    
-    <!-- SOLO EL CSS DE BOOTSTRAP (desde CDN) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"" rel="stylesheet">
-    
-    <style>
-        /* Estilos específicos de Cover (copiados del original) */
-        .cover-container {
-            max-width: 42em;
-        }
-        .nav-masthead .nav-link {
-            color: rgba(255, 255, 255, .5);
-            border-bottom: .25rem solid transparent;
-        }
-        .nav-masthead .nav-link:hover,
-        .nav-masthead .nav-link:focus {
-            border-bottom-color: rgba(255, 255, 255, .25);
-        }
-        .nav-masthead .nav-link + .nav-link {
-            margin-left: 1rem;
-        }
-        .nav-masthead .active {
-            color: #fff;
-            border-bottom-color: #fff;
-        }
-        /* Opcional: fondo personalizado */
-        body {
-            background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('https://images.unsplash.com/photo-1497290756760-23ac55edf36f?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basket Fan Page</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url("https://images.unsplash.com/photo-1519861531473-9200262188bf");
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  </style>
 </head>
-<body class="d-flex h-100 text-center text-bg-dark">
-    
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        
-        <header class="mb-auto">
-            <div>
-                <h3 class="float-md-start mb-0">Mi titulo</h3> <!-- Cambiado -->
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link fw-bold py-1 px-0 active" href="index.html">Inicio</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#">acceso</a> <!-- Enlace a blog -->
-                    <a class="nav-link fw-bold py-1 px-0" href="#">Contacto</a>
-                </nav>
-            </div>
-        </header>
 
-        <main class="px-3">
-            <h1>Bienvenido a mi Portfolio</h1>
-            <p class="lead">Este es un template Cover personalizado para mostrar mis proyectos. Hecho con Bootstrap 5.</p>
-            <p class="lead">
-                <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Ir a Portfolio</a>
-            </p>
-        </main>
+<body>
 
-        <footer class="mt-auto text-white-50">
-            <p>Template <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://x.com/mdo" class="text-white">@mdo</a>.</p>
-        </footer>
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">🏀 Basket Fan</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="menu" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#info">Info</a></li>
+        <li class="nav-item"><a class="nav-link" href="#apps">Apps</a></li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <!-- JS DE BOOTSTRAP (para menús interactivos) -->
-    <script src="#"></script>
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1 class="display-3">Basketball Life 🏀</h1>
+    <p class="lead">Pasión por la NBA</p>
+    <a href="#info" class="btn btn-warning">Ver más</a>
+  </div>
+</section>
+
+<!-- INFO -->
+<section id="info" class="container py-5 text-center">
+  <h2>Sobre mí</h2>
+  <p>Soy Lisandro y me encanta el básquet</p>
+
+  <ul class="list-unstyled">
+    <li>🏀 Jugar basket</li>
+    <li>📺 Ver NBA</li>
+    <li>🔥 Mirar highlights</li>
+  </ul>
+
+  <h4>Jugadores favoritos</h4>
+  <p>LeBron James • Stephen Curry • Kevin Durant</p>
+</section>
+
+<!-- APPS -->
+<section id="apps" class="container py-5 text-center">
+  <h2>Apps que uso</h2>
+
+  <a href="https://www.instagram.com/" class="btn btn-danger m-2">Instagram</a>
+  <a href="https://open.spotify.com/" class="btn btn-success m-2">Spotify</a>
+  <a href="https://www.whatsapp.com/" class="btn btn-primary m-2">WhatsApp</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-center p-3">
+  <p>© 2026 Basket Fan Page</p>
+</footer>
+
+<!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
